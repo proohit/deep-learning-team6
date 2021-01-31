@@ -9,6 +9,8 @@ def get_augmented_frames(frame, augmentations):
     if 'color' in augmentations:
         colored_frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
         augmented_frames.append(colored_frame)
+        colored_frame = cv2.cvtColor(frame, cv2.COLOR_RGB2HSV)
+        augmented_frames.append(colored_frame)
     # farben anpassen
     # skalieren
     # zoom

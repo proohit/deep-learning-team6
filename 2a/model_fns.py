@@ -38,6 +38,7 @@ def evaluate_model(history, model, test_data, test_labels):
 
     test_loss, test_acc = model.evaluate(test_data,  test_labels, verbose=2)
     print(f"Test Accuracy: {test_acc}, Test Loss: {test_loss}")
+    return test_acc
     
 def run_kfold(x,y):
     num_folds = 5
